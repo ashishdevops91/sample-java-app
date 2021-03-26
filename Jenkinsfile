@@ -1,7 +1,7 @@
 pipeline {
     agent any
 	tools {
-		maven 'MAVEN_HOME'
+		maven 'M3'
 		
 	}
 
@@ -10,7 +10,7 @@ pipeline {
 
             steps {
                 
-                    bat 'mvn clean compile'
+                    sh 'mvn clean compile'
                 
             }
         }
@@ -19,7 +19,7 @@ pipeline {
 
             steps {
                 
-                    bat 'mvn test'
+                    sh 'mvn test'
                 }
             }
         
